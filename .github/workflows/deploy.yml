@@ -15,6 +15,7 @@ jobs:
 
       - name: SSH into VM and Deploy
         uses: appleboy/ssh-action@master
+
         with:
           host: ${{ secrets.AZURE_VM_IP }}
           username: ${{ secrets.AZURE_VM_USER }}
@@ -24,3 +25,4 @@ jobs:
             git pull origin main
             npm install
             pm2 restart node-app
+# making a push
